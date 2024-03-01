@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>description</th>
+        <th>depart</th>
+        <th>arrive</th>
+        <th>nbr de place</th>
+        <th>nbr de view</th>
+    </tr>
+    <tr *ngFor="let v of voyage">
+        <td>{{v.description}}</td>
+        <td>{{v.depart}}</td>
+        <td>{{v.arrive}}</td>
+        <td>{{v.nb_place}}</td>
+        <td>{{v.nb_view}}</td>
+    </tr>
+    
+</table>

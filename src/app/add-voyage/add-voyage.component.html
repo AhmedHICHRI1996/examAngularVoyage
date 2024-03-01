@@ -1,0 +1,24 @@
+<form [formGroup]="voyage">
+    description :<br>
+     <input formControlName="description" /><br>
+     <div *ngIf="description!.invalid && description!.touched">
+        <div *ngIf="description!.errors!['required']">description is required</div>
+        <div *ngIf="description!.errors!['minlength']">User name must have at least 6 characters</div>
+    </div>
+     
+     depart: <br>
+     <input type="text" formControlName="depart" /><br>
+     <div *ngIf="depart!.invalid && depart!.touched">
+        <div *ngIf="depart!.errors!['required']">depart is required</div>
+        <div *ngIf="depart!.errors!['pattern']">depart must start with Vdepart</div>
+    </div>
+ 
+     arrive: <br>
+     <input type="text" formControlName="arrive" /><br>
+
+     nb_place: <br>
+     <input type="number" formControlName="nb_place" /><br>
+    
+     
+     <input type="submit" value="Add" (click)="addVoyage()" [disabled]="voyage.invalid"/>
+ </form>
